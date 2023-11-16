@@ -54,7 +54,7 @@ internal class Helpers
             Date = DateTime.Now,
             Score = gameScore,
             Type = gameType,
-            TimeSpent = timeSpent
+            TimeSpent = timeSpent,
         });
     }
 
@@ -104,24 +104,24 @@ internal class Helpers
             // Hard
             if (difficulty == 3)
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 1001);
-                secondNumber = Helpers.GenerateRandomNumber(1, 1001);
+                firstNumber = GenerateRandomNumber(1, 1001);
+                secondNumber = GenerateRandomNumber(1, 1001);
 
                 ValidateDivisionNumbers(firstNumber, secondNumber);
             }
             // Medium
             else if (difficulty == 2)
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 501);
-                secondNumber = Helpers.GenerateRandomNumber(1, 501);
+                firstNumber = GenerateRandomNumber(1, 501);
+                secondNumber = GenerateRandomNumber(1, 501);
 
                 ValidateDivisionNumbers(firstNumber, secondNumber);
             }
             // Easy/Default
             else
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 101);
-                secondNumber = Helpers.GenerateRandomNumber(1, 101);
+                firstNumber = GenerateRandomNumber(1, 101);
+                secondNumber = GenerateRandomNumber(1, 101);
 
                 ValidateDivisionNumbers(firstNumber, secondNumber);
             }
@@ -133,26 +133,26 @@ internal class Helpers
             // Hard
             if (difficulty == 3)
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 101);
-                secondNumber = Helpers.GenerateRandomNumber(1, 101);
+                firstNumber = GenerateRandomNumber(1, 101);
+                secondNumber = GenerateRandomNumber(1, 101);
             }
             // Medium
             else if (difficulty == 2)
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 51);
-                secondNumber = Helpers.GenerateRandomNumber(1, 51);
+                firstNumber = GenerateRandomNumber(1, 51);
+                secondNumber = GenerateRandomNumber(1, 51);
             }
             // Easy/Default
             else
             {
-                firstNumber = Helpers.GenerateRandomNumber(1, 11);
-                secondNumber = Helpers.GenerateRandomNumber(1, 11);
+                firstNumber = GenerateRandomNumber(1, 11);
+                secondNumber = GenerateRandomNumber(1, 11);
             }
             return new int[2] { firstNumber, secondNumber };
         }
     }
 
-    internal enum TimerState
+    internal enum Difficulty
     {
         Start,
         Stop
